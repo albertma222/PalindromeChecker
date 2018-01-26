@@ -6,11 +6,11 @@ public void setup()
   {
     if(palindrome(lines[i])==true)
     {
-      println(lines[i] + " IS a palidrome.");
+      println(lines[i] + " IS a palindrome.");
     }
     else
     {
-      println(lines[i] + " is NOT a palidrome.");
+      println(lines[i] + " is NOT a palindrome.");
     }
   }
 }
@@ -21,9 +21,9 @@ public boolean palindrome(String word)
 }
 public String reverse(String str)
 {
-    String sNew = new String();
+    String snew = new String();
     //your code here
-    return sNew;
+    return snew;
 }
 
 
