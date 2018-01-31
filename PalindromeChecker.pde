@@ -14,15 +14,35 @@ public void setup()
     }
   }
 }
+
 public boolean palindrome(String word)
 {
-  //your code here
+  String r = new String();
+  
+  for(int i = 0; i < word.length(); i++) {
+  
+  	r = word.substring(i, i + 1) + r;
+  }
+    if(r.equals(word)) {
+    
+    return true;
+  }
   return false;
 }
+
 public String reverse(String str)
 {
     String snew = new String();
-    //your code here
+    String nSpace = new String();
+
+    snew = snew.toLowerCase();
+
+  	for(int i = 0; i < str.length(); i++) {
+
+    if(Character.isSpace(str.charAt(i)) == false)
+      nSpace = nSpace + str.substring(i, i + 1);
+    	return nSpace;
+  }
     return snew;
 }
 
