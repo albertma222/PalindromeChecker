@@ -17,33 +17,40 @@ public void setup()
 
 public boolean palindrome(String word)
 {
-  String r = new String();
-  
-  for(int i = 0; i < word.length(); i++) {
-  
-  	r = word.substring(i, i + 1) + r;
-  }
-    if(r.equals(word)) {
-    
-    return true;
-  }
-  return false;
+	String nW = new String(fin(word));
+    String rW = new String(rev(nW));
+
+    if(rW.equals(nW))
+        return true;
+
+    return false;
 }
 
-public String reverse(String str)
+public String rev(String str) {
+
+    String sn = new String();
+
+    for(int i = str.length(); i > 0; i--)
+        sn = sn + str.substring(i - 1, i);
+
+    return sn;
+
+}
+
+public String fin(String str)
 {
-    String snew = new String();
-    String nSpace = new String();
+    String snew = new String(str.toLowerCase());
+    String ans = new String("");
 
-    snew = snew.toLowerCase();
+ for(int i = 0; i < snew.length(); i++) {
 
-  	for(int i = 0; i < str.length(); i++) {
+        char a = snew.charAt(i);
+        String t = snew.substring(i, i+1);
 
-    if(Character.isSpace(str.charAt(i)) == false)
-      nSpace = nSpace + str.substring(i, i + 1);
-    	return nSpace;
-  }
-    return snew;
+        if(Character.isLetter(a) == true)
+            ans = ans + t;
+    }
+    return ans;
 }
 
 
